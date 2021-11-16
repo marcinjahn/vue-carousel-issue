@@ -4,12 +4,9 @@
       <div>
         <VueSlickCarousel v-bind="settings">
           <div v-for="item in items" :key="item.id">
-
-            <!-- ALTERNATIVE 1 (DOESN'T WORK) -->
-            <Child :item="item"/>
-
-            <!-- ALTERNATIVE 2 (WORKS) -->
-            <!-- <div>
+            
+            <!-- ALTERNATIVE 1 (WORKS) -->
+            <div>
               <a href="abc" target="_blank">
                 <img id="picture1" src="./assets/carouse-item.png" />
                 <div class="position-relative">
@@ -25,7 +22,10 @@
                   </div>
                 </div>
               </a>
-            </div> -->
+            </div>
+
+            <!-- ALTERNATIVE 2 (DOESN'T WORK) -->
+            <!-- <Child :item="item"/> -->
 
           </div>
         </VueSlickCarousel>
